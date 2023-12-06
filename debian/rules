@@ -1,4 +1,8 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_INSTALL_EXTRA = $(shell find ./schema -type f -name '*.json')
+export DH_GOLANG_INSTALL_EXTRA += config.md descriptor.md image-index.md image-layout.md manifest.md
+export DH_GOLANG_EXCLUDES = .tool
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang

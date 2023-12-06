@@ -1,5 +1,145 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-opencontainers-image-spec (1.1.0~rc5-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Reinhard Tartler <siretart@tauware.de>  Wed, 22 Nov 2023 18:58:53 +0000
+
+golang-github-opencontainers-image-spec (1.1.0~rc4-3) unstable; urgency=medium
+
+  * debian/control: account for API breaks in containers/image and umoci
+
+ -- Reinhard Tartler <siretart@tauware.de>  Wed, 20 Sep 2023 08:33:29 -0400
+
+golang-github-opencontainers-image-spec (1.1.0~rc4-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Reinhard Tartler <siretart@tauware.de>  Mon, 18 Sep 2023 18:01:26 -0400
+
+golang-github-opencontainers-image-spec (1.1.0~rc4-1) experimental; urgency=medium
+
+  * new upstream release
+  * drop patches, merged upstream
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 16 Sep 2023 10:09:21 -0400
+
+golang-github-opencontainers-image-spec (1.1.0~rc2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Breaks golang-github-containers-image-dev << 5.23.1-4~
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 04 Apr 2023 00:48:45 +0800
+
+golang-github-opencontainers-image-spec (1.1.0~rc2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Backport ArgsEscaped field in image config.
+    For containerd 1.6.20
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 01 Apr 2023 01:42:26 +0800
+
+golang-github-opencontainers-image-spec (1.1.0~rc2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump standards version
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 05 Feb 2023 08:41:37 -0500
+
+golang-github-opencontainers-image-spec (1.0.2+20211123.g43a7dee1ec31-2) unstable; urgency=medium
+
+  * upload to unstable
+
+ -- Reinhard Tartler <siretart@tauware.de>  Tue, 16 Aug 2022 10:16:44 +0200
+
+golang-github-opencontainers-image-spec (1.0.2+20211123.g43a7dee1ec31-1) experimental; urgency=medium
+
+  * New upstream snapshot, Closes: #995876
+  * Add myself to uploaders
+
+ -- Reinhard Tartler <siretart@tauware.de>  Mon, 16 May 2022 07:54:23 -0400
+
+golang-github-opencontainers-image-spec (1.0.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add Breaks for golang-github-containerd-containerd-dev
+  * Add multi arch hint
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 20 Nov 2021 16:33:15 +0800
+
+golang-github-opencontainers-image-spec (1.0.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.0.2
+    + Mitigate CVE-2021-41190
+  * Update Standards-Version to 4.6.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 20 Nov 2021 02:28:27 +0800
+
+golang-github-opencontainers-image-spec (1.0.1-5) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Shengjing Zhu ]
+  * Drop go4 dependency
+  * Update uscan watch file to version 4
+  * Bump debhelper-compat to 13
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Update Section to golang
+  * Copy markdown specs to build dir
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 17 Jan 2021 01:50:34 +0800
+
+golang-github-opencontainers-image-spec (1.0.1-4) unstable; urgency=medium
+
+  * Team upload.
+  * Drop unused golang-github-spf13-cobra-dev from Depends
+  * Drop unused golang-github-opencontainers-specs-dev from Depends
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Switch to debhelper-compat format
+  * Drop unused go-md2man from Build-Depends
+  * Remove unused Files-Excluded field in d/copyright
+  * Remove unused comments in d/rules
+  * Add Rules-Requires-Root
+  * Backport upstream patch to build with new gojsonschema
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 23 Mar 2020 00:16:35 +0800
+
+golang-github-opencontainers-image-spec (1.0.1-3) unstable; urgency=medium
+
+  * Priority: optional; Standards-Version: 4.4.1.
+  * Testsuite: autopkgtest-pkg-go.
+  * DH & compat to version 12.
+  * Enabled tests.
+  * Install "schema".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 04 Nov 2019 02:24:00 +1100
+
+golang-github-opencontainers-image-spec (1.0.1-2) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Reinhard Tartler ]
+  * add patch from upstream: zstd constants
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 19 Oct 2019 22:54:29 -0400
+
+golang-github-opencontainers-image-spec (1.0.1-1) unstable; urgency=medium
+
+  * New upstream version
+  * Stop vendoring go4.org/errorutil in favor of build-dep on golang-go4-dev
+  * Add myself to uploaders
+  * Fix Build-Deps/Depends
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Sat, 17 Feb 2018 13:13:31 +0100
+
+golang-github-opencontainers-image-spec (1.0.0~rc2+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #844127).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 13 Nov 2016 06:05:23 +1100
